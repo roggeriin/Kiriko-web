@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kiriko - Habilidades y Talentos</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,800;1,400&family=Teko:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "kiriko-red": "#C41F3E",
+              "kiriko-darkred": "#8A142A",
+              "kitsune-cyan": "#00E5FF",
+              "card-bg": "#1E1E24",
+              "card-dark": "#1d2330",
+              "talent-orange": "#f36b21",
+            },
+            fontFamily: {
+              sans: ["Poppins", "sans-serif"],
+              display: ["Teko", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="min-h-screen flex flex-col font-sans bg-[#121212] text-white">
+    <header class="bg-black border-b border-gray-800 sticky top-0 z-50 shadow-lg">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row justify-between items-center py-4">
+          <div class="flex items-center space-x-3 mb-4 md:mb-0">
+            <i class="fa-solid fa-leaf text-kiriko-red text-3xl"></i>
+            <h1 class="font-display text-4xl font-bold tracking-wider uppercase">
+              Kiriko <span class="neon-text text-3xl ml-2">狐</span>
+            </h1>
+          </div>
+
+          <!-- Menú de Navegación Corregido y Limpio -->
+          <nav class="flex space-x-1 sm:space-x-6 overflow-x-auto w-full md:w-auto pb-2 md:pb-0 scrollbar-hide">
+            <a href="../index.html" class="tab-btn px-3 py-2 text-sm sm:text-base font-semibold text-gray-300 whitespace-nowrap">
+              <i class="fa-solid fa-book mr-2"></i> Historia
+            </a>
+            <a href="habilidades.html" class="tab-btn active px-3 py-2 text-sm sm:text-base font-semibold text-gray-300 whitespace-nowrap">
+              <i class="fa-solid fa-bolt mr-2"></i> Habilidades
+            </a>
+            <a href="protips.html" class="tab-btn px-3 py-2 text-sm sm:text-base font-semibold text-gray-300 whitespace-nowrap">
+              <i class="fa-solid fa-gamepad mr-2"></i> Cómo Jugar
+            </a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main class="flex-grow max-w-6xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-8">
+      <section class="fade-in block">
+        <h2 class="font-display text-4xl text-center mb-10 text-white">
+          <span class="text-kitsune-cyan">Arsenal</span> y Habilidades del Personaje
+        </h2>
+
+        <!-- Habilidades Principales -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+          <div class="ability-card bg-card-bg p-6 rounded-lg relative overflow-hidden">
+            <div class="flex items-center mb-4">
+              <img src="../img/Ofuda.png" alt="Ofuda" class="w-12 h-12 shrink-0 mr-4 rounded-full border-2 border-kiriko-red shadow-lg bg-black object-contain p-1" />
+              <h3 class="font-display text-2xl font-bold tracking-wide">Ofuda de Sanación (Fuego Principal)</h3>
+            </div>
+            <p class="text-gray-400 mb-3 text-sm">Lanza talismanes curativos que buscan a los aliados. Recarga automática.</p>
+            <ul class="text-sm text-gray-300 space-y-2">
+              <li><span class="text-green-400 font-bold"><i class="fa-solid fa-plus"></i> Ventaja:</span> Auto-apuntado sutil; ideal para curar objetivos móviles.</li>
+              <li><span class="text-red-400 font-bold"><i class="fa-solid fa-minus"></i> Desventaja:</span> Tienen tiempo de viaje lento a larga distancia.</li>
+            </ul>
+          </div>
+
+          <div class="ability-card bg-card-bg p-6 rounded-lg">
+            <div class="flex items-center mb-4">
+              <img src="../img/Kunai.png" alt="Kunai" class="w-12 h-12 shrink-0 mr-4 rounded-full border-2 border-gray-500 shadow-lg bg-black object-contain p-1" />
+              <h3 class="font-display text-2xl font-bold tracking-wide">Kunai (Fuego Secundario)</h3>
+            </div>
+            <p class="text-gray-400 mb-3 text-sm">Lanza proyectiles con un daño crítico extremadamente alto en la cabeza.</p>
+            <ul class="text-sm text-gray-300 space-y-2">
+              <li><span class="text-green-400 font-bold"><i class="fa-solid fa-plus"></i> Ventaja:</span> Multiplicador de 2.5x en headshot (120 de daño) capaz de eliminar objetivos frágiles.</li>
+              <li><span class="text-red-400 font-bold"><i class="fa-solid fa-minus"></i> Desventaja:</span> Daño al cuerpo muy bajo (45). Exige alta precisión mecánica.</li>
+            </ul>
+          </div>
+
+          <div class="ability-card bg-card-bg p-6 rounded-lg">
+            <div class="flex items-center mb-4">
+              <img src="../img/PasoLigero.png" alt="Paso Rápido" class="w-12 h-12 shrink-0 mr-4 rounded-full border-2 border-kitsune-cyan shadow-lg bg-black object-contain p-1" />
+              <h3 class="font-display text-2xl font-bold tracking-wide">Paso Rápido (L1)</h3>
+            </div>
+            <p class="text-gray-400 mb-3 text-sm">Teletranspórtate directamente a un aliado a través de las paredes.</p>
+            <ul class="text-sm text-gray-300 space-y-2">
+              <li><span class="text-green-400 font-bold"><i class="fa-solid fa-plus"></i> Ventaja:</span> La mejor habilidad de escape y reposicionamiento que atraviesa estructuras.</li>
+              <li><span class="text-red-400 font-bold"><i class="fa-solid fa-minus"></i> Desventaja:</span> Depende totalmente de la posición de un aliado vivo.</li>
+            </ul>
+          </div>
+
+          <div class="ability-card bg-card-bg p-6 rounded-lg">
+            <div class="flex items-center mb-4">
+              <img src="../img/Suzu.png" alt="Suzu" class="w-12 h-12 shrink-0 mr-4 rounded-full border-2 border-white shadow-lg bg-black object-contain p-1" />
+              <h3 class="font-display text-2xl font-bold tracking-wide">Suzu de Protección (R1)</h3>
+            </div>
+            <p class="text-gray-400 mb-3 text-sm">Vuelve invulnerables brevemente a los aliados y purifica efectos negativos.</p>
+            <ul class="text-sm text-gray-300 space-y-2">
+              <li><span class="text-green-400 font-bold"><i class="fa-solid fa-plus"></i> Ventaja:</span> Cancela habilidades definitivas enteras y limpia estados alterados (anti-cura).</li>
+              <li><span class="text-red-400 font-bold"><i class="fa-solid fa-minus"></i> Desventaja:</span> Tiempo de reutilización muy alto; un mal uso deja vulnerable al equipo.</li>
+            </ul>
+          </div>
+
+          <div class="ability-card bg-card-bg p-6 rounded-lg md:col-span-2 border-l-4 border-kitsune-cyan shadow-[0_0_15px_rgba(0,229,255,0.1)]">
+            <div class="flex items-center mb-4">
+              <img src="../img/Kitsune.png" alt="Kitsune" class="w-14 h-14 shrink-0 mr-4 rounded-full shadow-[0_0_15px_rgba(0,229,255,0.8)] border-2 border-kitsune-cyan bg-black object-contain p-1" />
+              <h3 class="font-display text-3xl font-bold tracking-wide neon-text">Marcha del Kitsune (Ultimate)</h3>
+            </div>
+            <p class="text-gray-300 mb-3 text-base">Invoca un espíritu de zorro que otorga velocidad de movimiento, de ataque y recarga rápida.</p>
+            <ul class="text-sm text-gray-300 space-y-2">
+              <li><span class="text-green-400 font-bold"><i class="fa-solid fa-plus"></i> Ventaja:</span> Prácticamente asegura ganar cualquier enfrentamiento grupal (teamfight).</li>
+              <li><span class="text-red-400 font-bold"><i class="fa-solid fa-minus"></i> Desventaja:</span> Se desperdicia si el equipo no acompaña la ofensiva o si el enemigo tiene defensas activas.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- SECCIÓN DE TALENTOS INTEGRADA -->
+        <div class="text-center mb-10 mt-12">
+          <h2 class="font-display text-4xl text-white">Talentos y <span class="text-talent-orange">Mejoras de Habilidad</span></h2>
+          <p class="text-gray-400 mt-2">Habilidades pasivas y progresión del personaje.</p>
+        </div>
+
+        <div class="flex flex-col items-center gap-16 w-full max-w-5xl mx-auto">
+          <!-- BLOQUE 1: VENTAJA MENOR (NIVEL 2) -->
+          <div class="w-full flex flex-col items-center">
+            <div class="text-center mb-6">
+              <h3 class="text-white font-bold uppercase tracking-wider text-lg">VENTAJA MENOR</h3>
+              <p class="text-gray-400 text-xs font-bold tracking-widest mt-0.5">(NIVEL 2)</p>
+            </div>
+
+            <div class="flex flex-col md:flex-row items-stretch justify-center w-full relative gap-6 md:gap-0">
+              <div class="flex-1 bg-card-dark p-6 rounded-xl shadow-xl z-10 border border-gray-800 flex flex-col justify-center">
+                <h4 class="text-talent-orange font-bold uppercase text-sm mb-2 tracking-wider">Atención de urgencia</h4>
+                <p class="text-gray-300 text-sm leading-relaxed">La velocidad de proyectil de Ofuda de sanación aumenta un 50 % al rastrear aliados que tienen menos de la mitad de salud.</p>
+              </div>
+
+              <div class="hidden md:flex w-48 flex-col items-center justify-center relative z-0 shrink-0">
+                <div class="flex items-center gap-3 relative">
+                  <div class="absolute -left-5 top-1/2 -translate-y-1/2 w-5 h-16 border-l-4 border-t-4 border-b-4 border-talent-orange rounded-l-full"></div>
+                  <div class="w-14 h-14 bg-black rounded-full border-2 border-gray-700 flex items-center justify-center overflow-hidden p-2 shadow-inner">
+                    <img src="../img/AtencionUrgente.png" alt="Atención de Urgencia" class="w-full h-full object-contain" />
+                  </div>
+                  <div class="w-14 h-14 bg-black rounded-full border-2 border-gray-700 flex items-center justify-center overflow-hidden p-2 shadow-inner">
+                    <img src="../img/Vidente.png" alt="Vidente" class="w-full h-full object-contain" />
+                  </div>
+                  <div class="absolute -right-5 top-1/2 -translate-y-1/2 w-5 h-16 border-r-4 border-t-4 border-b-4 border-talent-orange rounded-r-full"></div>
+                </div>
+              </div>
+
+              <div class="flex-1 bg-card-dark p-6 rounded-xl shadow-xl z-10 border border-gray-800 flex flex-col justify-center">
+                <h4 class="text-talent-orange font-bold uppercase text-sm mb-2 tracking-wider">Vidente</h4>
+                <p class="text-gray-300 text-sm leading-relaxed">Los impactos de kunái lanzan 2 Ofudas de sanación a un aliado que tengas delante.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- BLOQUE 2: VENTAJA MAYOR (NIVEL 3) -->
+          <div class="w-full flex flex-col items-center">
+            <div class="text-center mb-6">
+              <h3 class="text-white font-bold uppercase tracking-wider text-lg">VENTAJA MAYOR</h3>
+              <p class="text-gray-400 text-xs font-bold tracking-widest mt-0.5">(NIVEL 3)</p>
+            </div>
+
+            <div class="flex flex-col md:flex-row items-stretch justify-center w-full relative gap-6 md:gap-0">
+              <div class="flex-1 bg-card-dark p-6 rounded-xl shadow-xl z-10 border border-gray-800 flex flex-col justify-center">
+                <h4 class="text-talent-orange font-bold uppercase text-sm mb-2 tracking-wider">Paso preparado</h4>
+                <p class="text-gray-300 text-sm leading-relaxed">Paso ligero otorga a Kiriko un 40% de ataque aumentado y velocidad de recarga durante 3 segundos.</p>
+              </div>
+
+              <div class="hidden md:flex w-48 flex-col items-center justify-center relative z-0 shrink-0">
+                <div class="flex items-center gap-3 relative">
+                  <div class="absolute -left-5 top-1/2 -translate-y-1/2 w-5 h-16 border-l-4 border-t-4 border-b-4 border-talent-orange rounded-l-full"></div>
+                  <div class="w-14 h-14 bg-black rounded-full border-2 border-gray-700 flex items-center justify-center overflow-hidden p-2 shadow-inner">
+                    <img src="../img/PasoPreparado.png" alt="Paso Preparado" class="w-full h-full object-contain" />
+                  </div>
+                  <div class="w-14 h-14 bg-black rounded-full border-2 border-gray-700 flex items-center justify-center overflow-hidden p-2 shadow-inner">
+                    <img src="../img/Baile.png" alt="Baile" class="w-full h-full object-contain" />
+                  </div>
+                  <div class="absolute -right-5 top-1/2 -translate-y-1/2 w-5 h-16 border-r-4 border-t-4 border-b-4 border-talent-orange rounded-r-full"></div>
+                </div>
+              </div>
+
+              <div class="flex-1 bg-card-dark p-6 rounded-xl shadow-xl z-10 border border-gray-800 flex flex-col justify-center">
+                <h4 class="text-talent-orange font-bold uppercase text-sm mb-2 tracking-wider">Baile</h4>
+                <p class="text-gray-300 text-sm leading-relaxed">Suzu de protección otorga un 30% más de velocidad de movimiento a los aliados durante 4 segundos.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-black border-t border-gray-800 py-6 mt-16 text-center text-gray-500 text-sm">
+      <p>&copy; 2026 Guía Interactiva - Creada con motivos educativos.</p>
+    </footer>
+  </body>
+</html>

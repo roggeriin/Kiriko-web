@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kiriko - Árbol de Talentos</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,800;1,400&family=Teko:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "kiriko-red": "#C41F3E",
+            },
+            fontFamily: {
+              sans: ["Poppins", "sans-serif"],
+              display: ["Teko", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="min-h-screen flex flex-col font-sans">
+    <header
+      class="bg-black border-b border-gray-800 sticky top-0 z-50 shadow-lg"
+    >
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="flex flex-col md:flex-row justify-between items-center py-4"
+        >
+          <div class="flex items-center space-x-3 mb-4 md:mb-0">
+            <i class="fa-solid fa-leaf text-kiriko-red text-3xl"></i>
+            <h1
+              class="font-display text-4xl font-bold tracking-wider uppercase"
+            >
+              Kiriko <span class="neon-text text-3xl ml-2">狐</span>
+            </h1>
+          </div>
+
+          <nav
+            class="flex space-x-1 sm:space-x-6 overflow-x-auto w-full md:w-auto pb-2 md:pb-0 scrollbar-hide"
+          >
+            <a
+              href="../index.html"
+              class="tab-btn px-3 py-2 text-sm sm:text-base font-semibold text-gray-300 whitespace-nowrap"
+            >
+              <i class="fa-solid fa-book mr-2"></i> Historia
+            </a>
+            <a
+              href="habilidades.html"
+              class="tab-btn px-3 py-2 text-sm sm:text-base font-semibold text-gray-300 whitespace-nowrap"
+            >
+              <i class="fa-solid fa-bolt mr-2"></i> Habilidades
+            </a>
+            <a
+              href="protips.html"
+              class="tab-btn px-3 py-2 text-sm sm:text-base font-semibold text-gray-300 whitespace-nowrap"
+            >
+              <i class="fa-solid fa-gamepad mr-2"></i> Cómo Jugar
+            </a>
+            <a
+              href="talentos.html"
+              class="tab-btn active px-3 py-2 text-sm sm:text-base font-semibold text-gray-300 whitespace-nowrap"
+            >
+              <i class="fa-solid fa-sitemap mr-2"></i> Talentos
+            </a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main class="flex-grow max-w-6xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-8">
+      <section class="fade-in block">
+        <div class="text-center mb-10">
+          <h2 class="font-display text-4xl text-white">
+            Árbol de <span class="text-[#f36b21]">Talentos</span>
+          </h2>
+          <p class="text-gray-400 mt-2">
+            Mejoras de campaña y progresión de maestría.
+          </p>
+        </div>
+
+        <div
+          class="flex flex-col items-center gap-10 mt-8 w-full max-w-5xl mx-auto font-sans"
+        >
+          <!-- Nivel 2 -->
+          <div class="text-center mb-[-1rem] z-20">
+            <p class="text-white text-sm font-bold tracking-widest">
+              (NIVEL 2)
+            </p>
+          </div>
+
+          <div
+            class="flex flex-col md:flex-row items-stretch justify-center w-full relative gap-4 md:gap-0"
+          >
+            <div
+              class="flex-1 bg-[#2b3445] p-6 rounded shadow-lg z-10 border border-[#3a445c]"
+            >
+              <h4
+                class="text-[#f36b21] font-bold uppercase text-[15px] mb-3 tracking-wide"
+              >
+                Atención de urgencia
+              </h4>
+              <p class="text-gray-200 text-sm leading-relaxed">
+                La velocidad de proyectil de Ofuda de sanación aumenta un 50 %
+                al rastrear aliados que tienen menos de la mitad de salud.
+              </p>
+            </div>
+
+            <div
+              class="hidden md:flex w-40 flex-col items-center justify-center relative z-0 shrink-0"
+            >
+              <div class="flex items-center gap-3 relative">
+                <div
+                  class="absolute -left-4 top-1/2 -translate-y-1/2 w-4 h-16 border-l-4 border-t-4 border-b-4 border-[#f36b21] rounded-l-full"
+                ></div>
+                <div
+                  class="w-14 h-14 bg-black rounded-full border-2 border-gray-700 flex items-center justify-center overflow-hidden p-2 shadow-inner"
+                >
+                  <img
+                    src="../img/AtencionUrgente.png"
+                    alt="Atención de Urgencia"
+                    class="w-full h-full object-contain"
+                  />
+                </div>
+                <div
+                  class="w-14 h-14 bg-black rounded-full border-2 border-gray-700 flex items-center justify-center overflow-hidden p-2"
+                >
+                  <img
+                    src="../img/Vidente.png"
+                    alt="Vidente"
+                    class="w-full h-full object-contain"
+                  />
+                </div>
+                <div
+                  class="absolute -right-4 top-1/2 -translate-y-1/2 w-4 h-16 border-r-4 border-t-4 border-b-4 border-[#f36b21] rounded-r-full"
+                ></div>
+              </div>
+            </div>
+
+            <div
+              class="flex-1 bg-[#2b3445] p-6 rounded shadow-lg z-10 border border-[#3a445c]"
+            >
+              <h4
+                class="text-[#f36b21] font-bold uppercase text-[15px] mb-3 tracking-wide"
+              >
+                Vidente
+              </h4>
+              <p class="text-gray-200 text-sm leading-relaxed">
+                Los impactos de kunái lanzan 2 Ofudas de sanación a un aliado
+                que tengas delante.
+              </p>
+            </div>
+          </div>
+
+          <!-- Nivel 3 -->
+          <div class="text-center mt-6 mb-[-1rem] z-20">
+            <h3 class="text-white font-bold uppercase tracking-wider text-lg">
+              Ventaja Mayor
+            </h3>
+            <p class="text-white text-sm font-bold tracking-widest">
+              (NIVEL 3)
+            </p>
+          </div>
+
+          <div
+            class="flex flex-col md:flex-row items-stretch justify-center w-full relative gap-4 md:gap-0"
+          >
+            <div
+              class="flex-1 bg-[#2b3445] p-6 rounded shadow-lg z-10 border border-[#3a445c]"
+            >
+              <h4
+                class="text-[#f36b21] font-bold uppercase text-[15px] mb-3 tracking-wide"
+              >
+                Paso Preparado
+              </h4>
+              <p class="text-gray-200 text-sm leading-relaxed">
+                Paso ligero otorga a Kiriko un 40% de ataque aumentado y
+                velocidad de recarga durante 3 segundos.
+              </p>
+            </div>
+
+            <div
+              class="hidden md:flex w-40 flex-col items-center justify-center relative z-0 shrink-0"
+            >
+              <div class="flex items-center gap-3 relative">
+                <div
+                  class="absolute -left-4 top-1/2 -translate-y-1/2 w-4 h-16 border-l-4 border-t-4 border-b-4 border-[#f36b21] rounded-l-full"
+                ></div>
+                <div
+                  class="w-14 h-14 bg-black rounded-full border-2 border-gray-700 flex items-center justify-center overflow-hidden p-2"
+                >
+                  <img
+                    src="../img/PasoPreparado.png"
+                    alt="Paso Preparado"
+                    class="w-full h-full object-contain"
+                  />
+                </div>
+                <div
+                  class="w-14 h-14 bg-black rounded-full border-2 border-gray-700 flex items-center justify-center overflow-hidden p-2"
+                >
+                  <img
+                    src="../img/Baile.png"
+                    alt="Baile"
+                    class="w-full h-full object-contain"
+                  />
+                </div>
+                <div
+                  class="absolute -right-4 top-1/2 -translate-y-1/2 w-4 h-16 border-r-4 border-t-4 border-b-4 border-[#f36b21] rounded-r-full"
+                ></div>
+              </div>
+            </div>
+
+            <div
+              class="flex-1 bg-[#2b3445] p-6 rounded shadow-lg z-10 border border-[#3a445c]"
+            >
+              <h4
+                class="text-[#f36b21] font-bold uppercase text-[15px] mb-3 tracking-wide"
+              >
+                Baile
+              </h4>
+              <p class="text-gray-200 text-sm leading-relaxed">
+                Suzu de protección otorga un 30% más de velocidad de movimiento
+                a los aliados durante 4 segundos.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer
+      class="bg-black border-t border-gray-800 py-6 mt-8 text-center text-gray-500 text-sm"
+    >
+      <p>&copy; 2026 Guía Interactiva - Creada con motivos educativos.</p>
+    </footer>
+  </body>
+</html>
